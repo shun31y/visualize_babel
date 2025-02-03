@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "oa-detection"
+name = "visualize_babel"
 version = "0.1.0"
-description = "OA検出の研究のためのプロジェクト"
+description = "BABELデータセットの可視化を行うためのリポジトリ"
 authors = ["shun31y <shun.kato@elyza.ai>"]
 readme = "README.md"
 
