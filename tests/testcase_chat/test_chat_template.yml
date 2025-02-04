@@ -1,0 +1,4 @@
+- input: "Hello!"
+  preprocessed: '[{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Hello!"}]'
+- input: "How are you?"
+  preprocessed: '[{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "How are you?"}]'
