@@ -24,6 +24,7 @@ matplotlib = "^3.9.0"
 openai = "^1.61.0"
 pyyaml = "^6.0.2"
 pytest = "^8.3.4"
+python-levenshtein = "^0.26.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
