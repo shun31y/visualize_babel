@@ -3,11 +3,11 @@ import sys
 sys.path.append("..")
 import json
 import os
+from typing import Callable
 
 import Levenshtein
 import pytest
 import yaml
-
 from src.model.chat import chat, chat_template
 
 
@@ -18,7 +18,7 @@ def load_test_cases(filepath: str) -> list[str]:
 
 
 @pytest.fixture
-def setup():
+def setup() -> Callable[[str], list[str]]:
     def _setup(file_path: str):
         file_path = os.path.join(os.path.dirname(__file__), file_path)
         return load_test_cases(file_path)
@@ -26,7 +26,7 @@ def setup():
     return _setup
 
 
-def test_chat_template(setup):
+def test_chat_template(setup: Callable[[str], list[dict[str, str]]]) -> None:
     test_cases = setup("testcase_chat/test_chat_template.yml")
     for test_case in test_cases:
         user_message = test_case["input"]
@@ -35,7 +35,7 @@ def test_chat_template(setup):
         assert messages == preprocessed
 
 
-def test_chat(setup):
+def test_chat(setup: Callable[[str], list[dict[str, str]]]) -> None:
     test_cases = setup("testcase_chat/test_chat.yml")
     for test_case in test_cases:
         user_message = test_case["input"]
