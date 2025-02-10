@@ -8,6 +8,7 @@ from typing import Callable
 import Levenshtein
 import pytest
 import yaml
+
 from src.model.chat import chat, chat_template
 
 
