@@ -2,13 +2,22 @@
 BABELデータセットをLLMを用いて構築し、可視化を行うためのリポジトリ
 
 ## 環境構築
-プロジェクトディレクトリ以下で
+1. ライブラリのインストール
 ```
 poetry install
 ```
 ```
 poetry shell
 ```
+2. 環境変数の設定
+dotenvを使っているので
+```
+cp ./.env.example ./.env
+```
+してからOPENAI_API_KEYにAPI_KEYを置いておいてください
+3. promptの設定
+./data/prompt/babel.txtにpromptを設定して書き込んでおいてください
+
 
 ## データの生成
 ```
